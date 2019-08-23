@@ -1,2 +1,2 @@
 # local_workspace
-sync from local workspaces
+Sync from local workspaces
