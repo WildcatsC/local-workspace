@@ -10,7 +10,7 @@ class Solution(object):
         """
         ans = ""
         for str in zip(*strs):      # super simple ZIP; single star unpack strings, iterably. 
-                                    # zip(*str) == {('str[0][0]','str[1][0]',...),(str[0][1],str[1][1])....}
+                                    # zip(*str) == {('str[0][0]','str[1][0]',...),(str[0][1],str[1][1])....} 
                 if len(set(str))==1:
                 ans+= str[0]
             else:
