@@ -26,3 +26,8 @@ def fast_sevens(n):
 	return count 
 
 
+
+'''
+
+
+'''
