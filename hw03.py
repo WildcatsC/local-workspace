@@ -3,15 +3,22 @@ Write a recursive function num_sevens that takes a positive integer n and return
 Use recursion - the tests will fail if you use any assignment statements.
 '''
 
-def num_sevens(n):
+def rec_seven(n):
 	if n % 10 == 7:
 		return 1 + num_sevens(n//10)
 	elif n % 10 != 7 and n > 10:
 		return num_sevens(n//10)
 	else:
 		return 0
+def iter_seven(n):
+	total = 0
+	while n > 0:
+		if n % 10 == 7:
+			total = total + 1
+		n = n // 10
+	return total
 
-def fast_sevens(n):
+def fast_seven(n):
 	l = [123]    # empty a list ***
 	l[:] = []
 	print(str(n))
