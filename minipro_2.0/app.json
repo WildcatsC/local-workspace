@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/event/event"
+    ],
+
+    "window": {
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "fucker site",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#ededed"
+    },
+
+    "tabBar": {
+        "custom": false,
+
+        "color": "rgba(0,0,0,0.6)",
+
+        "selectedColor": "#5B71F2",
+
+        "borderStyle": "white",
+
+        "backgroundColor": "#ededed",
+
+        "list": [{
+                "text": "Home",
+                "pagePath": "pages/index/index",
+                "iconPath": "assets/icons/home.png",
+                "selectedIconPath": "assets/icons/home-active.png"
+            },
+            {
+                "text": "Activity",
+                "pagePath": "pages/event/event",
+                "iconPath": "assets/icons/event.png",
+                "selectedIconPath": "assets/icons/event-active.png"
+            }
+        ]
+    },
+
+    "debug": true
+
+}
