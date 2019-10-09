@@ -39,7 +39,7 @@ function game(meChoice) {
         case "rr":
         case "pp":
         case "ss":
-            draw(me, ucsb);
+            draw(me);
             break;
             //}
     }
@@ -48,18 +48,22 @@ function game(meChoice) {
 function win(me, ucsb) {
     meScore++;
     meScore_span.innerHTML = meScore; // ** IMPORTNAT ** 连到 html了。用.回 html
-    if (me == "r") me = "石头";
-    else if (me == "p") me = "布";
-    else me = "剪刀";
-    // 也可以写成函数的形式，就不用写两轮if else了。
-    result_p.innerHTML = `我出${me}  ucsb出${convert(ucsb)}. 赢了🔥`;
+
+    if (me == "r") m = "石头"; // 注意变量和参数同名造成的错误
+    else if (me == "p") m = "布";
+    else m = "剪刀";
+    // 也可以写成函数的形式，就不用写两轮if else了。还能更好地处理参数和变量重名。 非常需要重构优化。** IMPORTANT meChoice 和 me
+
+    result_p.innerHTML = `我出${m}  ucsb出${convert(ucsb)}. 赢了🔥`;
     // ``是一个新的牛逼写法
+
 
     //下面这两行是refine的部分：
     document.getElementById(me).classList.add("green-glow");
-    setTimeout(function() { document.getElementbyId(me).classList.remove("green-glow") }, 300);
+    setTimeout(function() { document.getElementById(me).classList.remove("green-glow") }, 300); // 就像lambda函数一样
 
 }
+setTimeout(function() { console.log("test") }, 1000);
 
 function convert(word) {
     if (word === "r") return "石头";
@@ -72,11 +76,13 @@ function lose(me, ucsb) {
     ucsbScore_span.innerHTML = ucsbScore;
     result_p.innerHTML = `我出${convert(ucsb)}  ucsb出${convert(me)}. 输了😪`;
     document.getElementById(me).classList.add("red-glow");
-    setTimeout(function() { document.getElementbyId(me).classList.remove("red-glow") }, 300);
+    setTimeout(function() { document.getElementById(me).classList.remove("red-glow") }, 300);
 }
 
-function draw() {
-    result_p.innerHTML = `我爱ucsb, 好好毒🌲.`
+function draw(me) {
+    result_p.innerHTML = `我爱ucsb, 好好毒🌲.`;
+    document.getElementById(me).classList.add("gray-glow");
+    setTimeout(function() { document.getElementById(me).classList.remove("gray-glow") }, 300);
 }
 
 
