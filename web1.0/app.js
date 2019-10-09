@@ -99,9 +99,7 @@ function main() {
 
     paper_div.addEventListener(
         'click',
-        function() {
-            game("p");
-        }
+        () => game("p"); // 又是一个es6写法！ 有点东西。
     )
 
     scissor_div.addEventListener(
