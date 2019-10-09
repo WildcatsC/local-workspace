@@ -107,3 +107,21 @@ header>h1 {
     font-size: 24px;
     margin-top: 50px;
 }
+
+
+/*下面还可以根据结果给圆圈加点glow */
+
+.green-glow {
+    border: 10px solid #02ff63;
+    box-shadow: 0 0 10px #00ff11;
+}
+
+.red-glow {
+    border: 10px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+    border: 10px solid #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
