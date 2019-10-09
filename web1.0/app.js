@@ -60,7 +60,7 @@ function win(me, ucsb) {
 
     //下面这两行是refine的部分：
     document.getElementById(me).classList.add("green-glow");
-    setTimeout(function() { document.getElementById(me).classList.remove("green-glow") }, 300); // 就像lambda函数一样
+    setTimeout(function() { document.getElementById(me).classList.remove("green-glow") }, 300); // 就像lambda函数一样 es5写法
 
 }
 setTimeout(function() { console.log("test") }, 1000);
@@ -76,7 +76,7 @@ function lose(me, ucsb) {
     ucsbScore_span.innerHTML = ucsbScore;
     result_p.innerHTML = `我出${convert(ucsb)}  ucsb出${convert(me)}. 输了😪`;
     document.getElementById(me).classList.add("red-glow");
-    setTimeout(function() { document.getElementById(me).classList.remove("red-glow") }, 300);
+    setTimeout(() => { document.getElementById(me).classList.remove("red-glow") }, 300); //es6 写法  **牛逼**
 }
 
 function draw(me) {
