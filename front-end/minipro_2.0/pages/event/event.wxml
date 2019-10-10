@@ -1,0 +1,7 @@
+<view class = "container vertical centered">
+    <view>
+        <text class = "header">
+            testestestestestest
+        </text>
+    </view>
+</view>
