@@ -50,8 +50,8 @@ function win(me, ucsb) {
     meScore_span.innerHTML = meScore; // ** IMPORTNAT ** 连到 html了。用.回 html
 
     if (me == "r") m = "石头"; // 注意变量和参数同名造成的错误
-    else if (me == "p") m = "布";
-    else m = "剪刀";
+    if (me == "p") m = "布";
+    m = "剪刀";
     // 也可以写成函数的形式，就不用写两轮if else了。还能更好地处理参数和变量重名。 非常需要重构优化。** IMPORTANT meChoice 和 me
 
     result_p.innerHTML = `我出${m}  ucsb出${convert(ucsb)}. 赢了🔥`;
@@ -95,19 +95,21 @@ function main() {
         function() {
             game("r");
         }
-    )
+    );
+
 
     paper_div.addEventListener(
         'click',
-        () => game("p"); // 又是一个es6写法！ 有点东西。
-    )
+        () => game("p")      // 这个oneline还不能有分号！
+		); // 又是一个es6写法！ 有点东西。
+
 
     scissor_div.addEventListener(
         'click',
         function() {
             game("s");
         }
-    )
+    );
 }
 
 main();
