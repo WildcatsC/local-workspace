@@ -100,8 +100,8 @@ function main() {
 
     paper_div.addEventListener(
         'click',
-        () => game("p")      // 这个oneline还不能有分号！
-		); // 又是一个es6写法！ 有点东西。
+        () => game("p") // 这个oneline还不能有分号！
+    ); // 又是一个es6写法！ 有点东西。
 
 
     scissor_div.addEventListener(

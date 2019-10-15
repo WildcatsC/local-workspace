@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #021936;
+    background-color: #18335d;
 }
 
 header {
@@ -101,7 +101,7 @@ header>h1 {
 
 #action-message {
     text-align: center;
-    color: rgb(193, 170, 18);
+    color: #fbcd33;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 24px;
