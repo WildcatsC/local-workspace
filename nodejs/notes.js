@@ -15,14 +15,12 @@ console.log(y) // no good
 // let ob2 = { b: 1 }
 // console.log(ob2.b) // same
 
-//getter: get语法将对象属性绑定到查询该属性时将被调用的函数。
+//getter: get语法将对象属性 property 绑定到查询该属性时将被调用的函数。
 var obj = {
         log: ['a', 'b', 'c'], // 记得逗号
-        get latest() {
-            if (this.log.length == 0) {
-                return undefined
-            }
-            return this.log[this.log.length - 1]
+        get latest() { // 这里就是property
+            if (this.log.length == 0) return undefined;
+            return this.log[this.log.length - 1];
         }
     }
     // console.log(obj.latest);
