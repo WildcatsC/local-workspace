@@ -14,6 +14,7 @@ class Solution {
 
     public List<List<Integer>> threeSum(int[] nums) {
        // 61b作业 继续暴力来一波
+       // 结论：初级暴力会超时  都已经sort好了就别一次一次从头找了 从两头开始！
        Arrays.sort(nums);
        System.out.println(Arrays.toString(nums));
        Set<List<Integer>> temp_re = new HashSet<List<Integer>>();
