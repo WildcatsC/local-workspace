@@ -14,7 +14,9 @@ function reverse(str) {
 }
 
 app.get('/', (req, res) => {
-    res.send(reverse(req.query.string));
+    // res.send(reverse(req.query.string));
+    res.send("fuck you");
 })
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
