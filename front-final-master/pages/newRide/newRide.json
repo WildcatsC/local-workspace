@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-search": "/dist/search/index",
+    "van-datetime-picker": "/dist/datetime-picker/index",
+    "van-pop": "/dist/popup/index",
+    "van-actioon-sheet": "/dist/action-sheet/index",
+    "van-picker": "/dist/picker/index",
+    "van-button": "/dist/button/index",
+    "van-toast": "/dist/toast/index",
+    "van-action-sheet": "/dist/action-sheet/index",
+    "van-popup": "/dist/popup/index"
+  },
+  "navigationBarTitleText": "创建行程"
+}

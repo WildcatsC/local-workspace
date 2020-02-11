@@ -1,0 +1,231 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "b6f2f2b6fde79e2934c2e852650a4758",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "b5031e90-ab98-11e9-9f66-931fb9fb694e",
+            "name": "Rideshare v0.3",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3000,
+            "routes": [
+                {
+                    "uuid": "",
+                    "documentation": "Login",
+                    "method": "get",
+                    "endpoint": "login",
+                    "body": "{\r\n    \"user_id\": 202\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d74aa490-ab99-11e9-9f66-931fb9fb694e",
+                    "documentation": "View filtered rides",
+                    "method": "get",
+                    "endpoint": "view-rides",
+                    "body": "{\r\n    \"result\": [\r\n        {\r\n            \"ride_id\": 1,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"Los Angeles\",\r\n            \"date\": \"08/01/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 1,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very fast.\"\r\n        },\r\n        {\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"San Jose\",\r\n            \"date\": \"08/03/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 0,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very slow.\"\r\n        } \r\n        \r\n    ]\r\n} ",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "0fbd5390-ab9a-11e9-9f66-931fb9fb694e",
+                    "documentation": "View Ride Detail",
+                    "method": "get",
+                    "endpoint": "view-ride",
+                    "body": " {\r\n    \"ride_id\": 1,\r\n    \"driver_id\": 202,\r\n    \"departure\": \"Isla Vista\",\r\n    \"destination\": \"Los Angeles\",\r\n    \"date\": \"08/01/2019\",\r\n    \"price\": 10,\r\n    \"num_seat\": 4,\r\n    \"num_approved\": 1,\r\n    \"status\": \"OPEN\",\r\n    \"note\": \"Very fast.\",\r\n    \r\n    \"driver\": {\r\n        \"user_id\": 202,\r\n        \"name\": \"Petry\",\r\n        \"contact\": \"666-666-6666\",\r\n        \"avatar_url\": \"\"\r\n    },\r\n    \r\n    \"applications\": [\r\n        {\r\n            \"application_Id\": 10,\r\n            \"ride_id\": 1,\r\n            \"passenger_id\": 202,\r\n            \"driver_id\": 202,\r\n            \"status\": \"ACCEPTED\",\r\n            \"num_passenger\": 1,\r\n            \"note\": \"old driver take take me\"\r\n        }\r\n    ]\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "e28b4d20-b0b5-11e9-b046-edc94049cef9",
+                    "documentation": "View rides of which I'm the driver or passenger",
+                    "method": "get",
+                    "endpoint": "view-my-rides",
+                    "body": "{\r\n    \"result\": [\r\n        {\r\n            \"ride_id\": 1,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"Los Angeles\",\r\n            \"date\": \"08/01/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 1,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very fast.\"\r\n        },\r\n        {\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"San Jose\",\r\n            \"date\": \"08/03/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 0,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very slow.\"\r\n        } \r\n        \r\n    ]\r\n} ",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d7067b00-b04c-11e9-a2c5-6106f8eb4227",
+                    "documentation": "Create Application",
+                    "method": "post",
+                    "endpoint": "create-application",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "907c0cd0-b04d-11e9-a2c5-6106f8eb4227",
+                    "documentation": "View My Applications",
+                    "method": "get",
+                    "endpoint": "view-my-applications",
+                    "body": " {\r\n    \"result\": [\r\n        {\r\n            \"application_Id\": 10,\r\n            \"ride_id\": 1,\r\n            \"driver_id\": 202,\r\n            \"passenger_id\": 202,\r\n            \"status\": \"ACCEPTED\",\r\n            \"num_passenger\": 1,\r\n            \"note\": \"old driver take take me\"\r\n        },{\r\n            \"application_Id\": 20,\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"passenger_id\": 202,\r\n            \"status\": \"PENDING\",\r\n            \"num_passenger\": 100,\r\n            \"note\": \"take me home country road\"\r\n        }\r\n    ]\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "a7e76180-b04d-11e9-a2c5-6106f8eb4227",
+                    "documentation": "View My Pending Applications",
+                    "method": "get",
+                    "endpoint": "view-my-pending-applications",
+                    "body": " {\r\n    \"result\": [\r\n        {\r\n            \"application_Id\": 20,\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"passenger_id\": 202,\r\n            \"status\": \"PENDING\",\r\n            \"num_passenger\": 100,\r\n            \"note\": \"take me home country road\"\r\n        }\r\n    ]\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "3ab464a0-bfd9-11e9-809e-1f0fad851326",
+                    "documentation": "View Application",
+                    "method": "get",
+                    "endpoint": "view-application",
+                    "body": "{\r\n    \"application_Id\": 20,\r\n    \"ride_id\": 2,\r\n    \"driver_id\": 202,\r\n    \"passenger_id\": 202,\r\n    \"status\": \"PENDING\",\r\n    \"num_passenger\": 100,\r\n    \"note\": \"take me home country road\"\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "af8dbc30-b04e-11e9-a2c5-6106f8eb4227",
+                    "documentation": "Accept Application",
+                    "method": "get",
+                    "endpoint": "accept-application",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "c75c3f80-b04e-11e9-a2c5-6106f8eb4227",
+                    "documentation": "Deny Application",
+                    "method": "get",
+                    "endpoint": "deny-application",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "dda952f0-b04e-11e9-a2c5-6106f8eb4227",
+                    "documentation": "View User",
+                    "method": "get",
+                    "endpoint": "view-user",
+                    "body": "{\n    \"name\": \"Petry\",\n    \"contact\": \"666-666-6666\",\n    \"avatar_url\": \"\"\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "548925d0-b04f-11e9-a2c5-6106f8eb4227",
+                    "documentation": "Update User",
+                    "method": "post",
+                    "endpoint": "update-user",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        }
+    ]
+}

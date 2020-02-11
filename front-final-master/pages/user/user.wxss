@@ -1,0 +1,25 @@
+/* pages/editUser/editUser.wxss */
+
+.user-icon{
+  height: 150rpx; 
+  width: 150rpx; 
+  margin-top: 20rpx; 
+  margin-left: 300rpx;
+  border-radius: 50%;
+}
+
+.changeInfo{
+  font: 50;
+  height: 70rpx;
+  width: 220rpx;
+  align-content: center;
+  margin-left: 500rpx;
+  margin-top: 30rpx;
+}
+
+.userInfo{
+  font-style: oblique;
+  align-content: center;
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}

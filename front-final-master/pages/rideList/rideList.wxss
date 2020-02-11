@@ -1,0 +1,24 @@
+/* pages/rideList/rideList.wxss */
+.greyListContainer {
+  border: 5rpx 5rpx 5rpx 5rpx;
+  border-color: grey;
+  margin:5rpx 0rpx 0rpx 0rpx;
+  background-color:gainsboro;
+  padding:10rpx 0rpx 10rpx 80rpx
+}
+.whiteListContainer {
+  border: 5rpx 5rpx 5rpx 5rpx;
+  border-color: grey;
+  margin:5rpx 0rpx 0rpx 0rpx;
+  background-color:white;
+  padding:10rpx 0rpx 10rpx 80rpx
+}
+
+
+.line{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin:0rpx 0rpx 0rpx 50rpx;
+  
+}

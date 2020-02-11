@@ -1,0 +1,31 @@
+<!--pages/user/user.wxml-->
+<van-button round plain hairline type="primary" class="header" size="small" bindtap="finished">完成</van-button>
+ 
+<!--image-->
+<view bindtap='setPhotoInfo'>
+    <button wx:if="{{getApp().globalData.imgUrl==null}}" class="user-icon" size="mini" style='background-color: #E62900'></button>
+    <view wx:else>
+      <image  class="user-icon" src="{{imgUrl}}"></image>
+    </view>
+</view>
+<!--账户和密码--> <!--problem:如何储存信息-->
+<van-cell-group class="top">
+  <van-field
+    required
+    label="用户名"
+    value="{{ name }}"
+    placeholder="请输入用户名"
+    border="{{ true }}"
+    bind:change="UserNameInput"
+  />
+  <van-field
+    required
+    label="联系方式"
+    value="{{ contact }}"
+    placeholder="请输入联系方式"
+    border="{{ true }}"
+    bind:change="contactInput"
+  />
+</van-cell-group>
+
+<!-- 这面的页面信息是否大量缺失? -->

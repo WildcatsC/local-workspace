@@ -1,0 +1,68 @@
+/* pages/myRide/myRide.wxss */
+.meIcon{
+  margin: 50rpx 20rpx 50rpx 80rpx
+}
+.iconContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center
+}
+.iconText{
+  color: rgb(212, 22, 60);
+  font-size: 30rpx;
+  margin: 0rpx 250rpx 0rpx 0rpx
+}
+.responded{
+  color:red
+}
+.pending{
+  color:green
+}
+.greyListContainer {
+  border: 5rpx 5rpx 5rpx 5rpx;
+  border-color: grey;
+  margin:5rpx 0rpx 0rpx 0rpx;
+  background-color:gainsboro;
+  padding:5rpx 20rpx 15rpx 20rpx
+
+}
+.whiteListContainer {
+  border: 5rpx 5rpx 5rpx 5rpx;
+  border-color: grey;
+  margin:5rpx 0rpx 0rpx 0rpx;
+  background-color:white;
+  padding:5rpx 20rpx 15rpx 20rpx;
+  
+}
+.line{
+  margin:0rpx 0rpx 0rpx 150rpx;
+  
+}
+.image{
+  height: 40rpx;
+  width:40rpx;
+  margin: 0px 100px 0px 100rpx
+}
+
+.newRideTab{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  margin:0rpx 40rpx 40rpx 0rpx;
+  padding: 15rpx 20rpx 15rpx 20rpx;
+  color: red;
+  border:3rpx solid red;
+  
+}
+.newRideContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin:40rpx 0rpx 0rpx 0rpx
+}
+.bellIcon{
+  width:50rpx;
+  height:50rpx;
+  
+}

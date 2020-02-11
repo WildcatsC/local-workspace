@@ -1,0 +1,16 @@
+<!--pages/completeSelf/completeSelf.wxml-->
+<van-button round plain type="info" class="changeInfo" size="normal" bindtap="self">更改信息</van-button>
+<button wx:if="{{imgUrl==null}}" class="user-icon" size="mini" style='background-color: #E62900'></button>
+<!-- <van-button round plain wx:if="{{imgUrl==null}}" class="user-icon" size="normal"></van-button> -->
+<view wx:else>
+  <image class="user-icon" src="{{imgUrl}}"></image>
+</view>
+
+<view wx:if="{{name==null}}"class="userInfo">用户名: 未输入用户名</view>
+<view wx:else class="userInfo">用户名: {{name}}</view>
+
+
+<!-- <image-loader  default-image='../images/placeholder800x400.png' mode='widthFix' original-image='https://www.neware.shop/demo/mobile/api/v1/public/image/download/201809051000165950' width="400rpx" height="200rpx"/> -->
+<!-- <view wx:else>
+  <image class="user-icon" src="{{carImgUrl}}"></image>
+</view> -->

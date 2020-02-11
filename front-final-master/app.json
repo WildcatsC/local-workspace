@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/departure/departure",
+    "pages/rideDetail/rideDetail",
+    "pages/editUser/editUser",
+    "pages/user/user",
+    "pages/myRide/myRide",
+    "pages/notification/notification",
+    "pages/application/application",
+    "pages/rideList/rideList",
+    "pages/newApplication/newApplication",
+    "pages/newRide/newRide"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DC143C",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/departure/departure",
+        "text": "主页",
+        "iconPath": "images/tabBars/home.png",
+        "selectedIconPath": "images/tabBars/home.png"
+      },
+      {
+        "pagePath": "pages/myRide/myRide",
+        "text": "行程",
+        "iconPath": "images/tabBars/trip.png",
+        "selectedIconPath": "images/tabBars/trip.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabBars/profile.png",
+        "selectedIconPath": "images/tabBars/profile.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

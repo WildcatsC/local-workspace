@@ -1,0 +1,86 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+page{
+  font-family: "Microsoft Yahei";
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header{
+  display: flex;
+  background-color:#A9A9A9;
+  border-bottom: 2rpx solid #A9A9A9;
+  margin-bottom: 10rpx;
+
+}
+
+.page-headerText{
+  padding: 20rpx 40rpx;
+  color: #000;
+  font-size: 40rpx;
+}
+
+.page-body{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.item{
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 2rpx solid #eee;
+  border-bottom-width: 10rpx;
+
+}
+
+.item .page-photo{
+  width: 160rpx;
+  height: 160rpx;
+  padding: 5rpx;
+}
+
+.item .page-word{
+  flex: 1;
+}
+
+.item .title, .item .idNumber{
+  display: block;
+  margin-bottom: 15rpx;
+}
+
+.item .title{
+  font-size: 35rpx;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.item .idNumber{
+  font-size: 35rpx;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 20rpx;
+  color:#999;
+  
+}

@@ -1,0 +1,70 @@
+/* pages/newRide/newRide.wxss */
+
+.buttonContainerClass{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 30rpx 30rpx 30rpx 30rpx
+}
+.buttonClass{
+  margin: 0rpx 100rpx 0rpx 0rpx !important
+} 
+
+.toolBarClass{
+  background: grey !important;
+}
+.pickerClass{
+  padding: 0px 0px 0px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  border: 0px 0px 0px 0px !important;
+  height:450rpx; 
+}
+.popupClass{
+  width: 600rpx !important;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  align-items: center
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.margin{
+  margin:5% 
+}
+.margin1 {
+  border: 5rpx solid darkred;
+
+}
+.complete{
+  width: 30%;
+  border: 5rpx solid darkred;
+  margin-left: 60%;
+  text-align: center;
+  color: darkred;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

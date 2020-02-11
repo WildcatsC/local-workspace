@@ -1,0 +1,330 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.5.1",
+    "checksum": "2dd2c27c5c7612470151c8d585962c34",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "11104540-dfe3-11e9-a744-bd3a0469242c",
+            "name": "Rideshare v0.6",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3000,
+            "routes": [
+                {
+                    "uuid": "11104542-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "Login",
+                    "method": "get",
+                    "endpoint": "login",
+                    "responses": [
+                        {
+                            "uuid": "0cb27237-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104543-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{\r\n    \"user_id\": 202\r\n}",
+                            "rules": []
+                        },
+                        {
+                            "uuid": "3c3f7330-f3a7-11e9-bacc-093f987fd6f2",
+                            "body": "{}",
+                            "latency": 0,
+                            "statusCode": "200",
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": ""
+                                }
+                            ],
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "29ab8e70-dfe3-11e9-9b02-bf1ef9924e93",
+                    "documentation": "Create Ride",
+                    "method": "post",
+                    "endpoint": "create-ride",
+                    "responses": [
+                        {
+                            "uuid": "0cb27238-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": ""
+                                }
+                            ],
+                            "body": "{}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104544-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View filtered rides",
+                    "method": "get",
+                    "endpoint": "view-rides",
+                    "responses": [
+                        {
+                            "uuid": "0cb27239-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104545-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{\r\n    \"result\": [\r\n        {\r\n            \"ride_id\": 1,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"Los Angeles\",\r\n            \"date\": \"08/01/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 1,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very fast.\"\r\n        },\r\n        {\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"San Jose\",\r\n            \"date\": \"08/03/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 0,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very slow.\"\r\n        } \r\n        \r\n    ]\r\n} ",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104546-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View Ride Detail",
+                    "method": "get",
+                    "endpoint": "view-ride",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723a-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104547-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": " {\r\n    \"ride_id\": 1,\r\n    \"driver_id\": 202,\r\n    \"departure\": \"Isla Vista\",\r\n    \"destination\": \"Los Angeles\",\r\n    \"date\": \"08/01/2019\",\r\n    \"price\": 10,\r\n    \"num_seat\": 4,\r\n    \"num_approved\": 1,\r\n    \"status\": \"OPEN\",\r\n    \"note\": \"Very fast.\",\r\n    \r\n    \"driver\": {\r\n        \"user_id\": 202,\r\n        \"name\": \"Petry\",\r\n        \"contact\": \"666-666-6666\",\r\n        \"avatar_url\": \"\"\r\n    },\r\n    \r\n    \"applications\": [\r\n        {\r\n            \"application_Id\": 10,\r\n            \"ride_id\": 1,\r\n            \"passenger_id\": 202,\r\n            \"driver_id\": 202,\r\n            \"status\": \"ACCEPTED\",\r\n            \"num_passenger\": 1,\r\n            \"note\": \"old driver take take me\"\r\n        }\r\n    ]\r\n}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "1110454a-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "Create Application",
+                    "method": "post",
+                    "endpoint": "create-application",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723b-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "1110454b-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104548-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View rides of which I'm the driver or passenger",
+                    "method": "get",
+                    "endpoint": "view-my-rides",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723c-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104549-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{\r\n    \"result\": [\r\n        {\r\n            \"ride_id\": 1,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"Los Angeles\",\r\n            \"date\": \"08/01/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 1,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very fast.\"\r\n        },\r\n        {\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"departure\": \"Isla Vista\",\r\n            \"destination\": \"San Jose\",\r\n            \"date\": \"08/03/2019\",\r\n            \"price\": 10,\r\n            \"num_seat\": 4,\r\n            \"num_approved\": 0,\r\n            \"status\": \"OPEN\",\r\n            \"note\": \"Very slow.\"\r\n        } \r\n        \r\n    ]\r\n} ",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "1110454e-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View My Pending Application List",
+                    "method": "get",
+                    "endpoint": "view-my-pending-applications",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723d-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "1110454f-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": " {\r\n    \"result\": [\r\n        {\r\n            \"application_Id\": 20,\r\n            \"ride_id\": 2,\r\n            \"driver_id\": 202,\r\n            \"passenger_id\": 202,\r\n            \"status\": \"PENDING\",\r\n            \"num_passenger\": 100,\r\n            \"note\": \"take me home country road\"\r\n        }\r\n    ]\r\n}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104550-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View Application",
+                    "method": "get",
+                    "endpoint": "view-application",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723e-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104551-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{\r\n    \"application_Id\": 20,\r\n    \"ride_id\": 2,\r\n    \"driver_id\": 202,\r\n    \"passenger_id\": 202,\r\n    \"status\": \"PENDING\",\r\n    \"num_passenger\": 100,\r\n    \"note\": \"take me home country road\"\r\n}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104552-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "Accept Application",
+                    "method": "get",
+                    "endpoint": "accept-application",
+                    "responses": [
+                        {
+                            "uuid": "0cb2723f-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104553-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104554-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "Deny Application",
+                    "method": "get",
+                    "endpoint": "deny-application",
+                    "responses": [
+                        {
+                            "uuid": "0cb27240-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104555-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104556-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "View User",
+                    "method": "get",
+                    "endpoint": "view-user",
+                    "responses": [
+                        {
+                            "uuid": "0cb27241-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104557-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{\n    \"name\": \"Petry\",\n    \"contact\": \"666-666-6666\",\n    \"avatar_url\": \"\"\n}",
+                            "rules": []
+                        }
+                    ]
+                },
+                {
+                    "uuid": "11104558-dfe3-11e9-a744-bd3a0469242c",
+                    "documentation": "Update User",
+                    "method": "post",
+                    "endpoint": "update-user",
+                    "responses": [
+                        {
+                            "uuid": "0cb27242-f3a7-11e9-bacc-093f987fd6f2",
+                            "statusCode": "200",
+                            "latency": 0,
+                            "filePath": "",
+                            "sendFileAsBody": false,
+                            "headers": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "uuid": "11104559-dfe3-11e9-a744-bd3a0469242c"
+                                }
+                            ],
+                            "body": "{}",
+                            "rules": []
+                        }
+                    ]
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "uuid": "11104541-dfe3-11e9-a744-bd3a0469242c"
+                }
+            ]
+        }
+    ]
+}

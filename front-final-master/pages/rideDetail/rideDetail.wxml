@@ -1,0 +1,25 @@
+<view class="margin">
+<view style="margin-top: 40px;">司机姓名</view>
+<text>{{ride.driver.name}}</text>
+
+<!-- <view style="margin-top: 40px;">车辆车型</view>
+<text>{{cartype}}</text> -->
+
+<view style="margin-top: 40px;">司机起点</view>
+<text>{{ride.departure}}</text>
+
+<!-- <view style="margin-top: 40px;">司机出发时间</view>
+<text>{{starttime}}</text> -->
+
+<view style="margin-top: 40px;">司机终点</view>
+<text>{{ride.destination}}</text>
+
+<view style="margin-top: 40px;">价格每人</view>
+<text>{{ride.price}}</text>
+
+<view style="margin-top: 40px;">剩余车上座位数</view>
+<text>{{ride.num_seat - ride.num_approved}}</text>
+
+<button bindtap="setDisabled">加入Ride</button>
+
+</view>

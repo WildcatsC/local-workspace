@@ -1,0 +1,10 @@
+{
+  "component":true,
+  "usingComponents":{
+    
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTitleText": "搭车信息",
+  "navigationBarTextStyle": "white"
+
+}

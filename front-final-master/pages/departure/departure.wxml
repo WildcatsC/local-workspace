@@ -1,0 +1,103 @@
+ 
+ <!--pages/departure/departure.wxml-->
+ <!-- <van-picker columns="{{ columns }}" bind:change="onDepartureChange" title= "选择出发地" show-toolbar= "true" confirm-button-text ="" cancel-button-text="" toolbar-class = "toolBarClass"  custom-class = "pickerClass" visible-item-count = "3" />
+
+
+<van-picker columns="{{ columns }}" bind:change="onDestinationChange" title= "选择目的地" show-toolbar= "true" confirm-button-text= "" cancel-button-text ="" toolbar-class = "toolBarClass" visible-item-count = "3"/>
+
+
+<van-datetime-picker type = 'date' value = '{{currentDate}}' min-date = "{{minDate}}" max-date = "{{maxDate}}" bind:input = "onInput" formatter = '{{formatter}}' title = "选择出发时间" bind:confirm = "onConfirm" confirm-button-text = "" cancel-button-text = "" toolbar-class = "toolBarClass" visible-item-count = "3"/> 
+<view class = "buttonClass"> 
+  <van-button type = "danger" bind:click ="onClick" >搜索</van-button> 
+</view>
+<van-toast id="van-toast" />  -->
+
+<!-- <van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+<view class="buttonContainerClass">
+<van-button custom-class = "buttonClass" type="default" bind:click="onClick">出发地</van-button>-->
+
+
+<!--Departure popup-->
+<!-- <view class="buttonContainerClass"> -->
+<view class = "row">
+<text class = "big"> CSA 无敌ride share </text>
+</view>
+  <view class = "row">
+    <!-- <view>出发地</view> -->
+    <van-button type="default" custom-class="buttonClass" bind:click="onClickDeparture">{{departure}}</van-button>
+    <van-button type="default" custom-class = "buttonClass" bind:click="onClickDestination">{{destination}}</van-button>
+    
+  </view>
+  <!-- <view class="row"> -->
+    <!-- <view>目的地</view> -->
+    <!-- <van-button type="default" custom-class = "buttonClass" bind:click="onClickDestination">{{destination}}</van-button> -->
+  <!-- </view> -->
+<!-- </view> -->
+<van-popup
+  show="{{ showDeparture }}"
+  overlay="true"
+  bind:close="onCloseDeparture"
+  custom-class="popupClass"
+>
+  <van-picker columns="{{ columns }}" bind:change="onDepartureChange"   confirm-button-text= "" cancel-button-text = "" visible-item-count = "3"/>
+</van-popup>
+
+
+
+<van-popup
+  show="{{ showDestination }}"
+  overlay="true"
+  bind:close="onCloseDestination"
+  custom-class="popupClass"
+>
+  <van-picker columns="{{ columns }}" bind:change="onDestinationChange"   confirm-button-text= "" cancel-button-text = "" visible-item-count = "3"/>
+</van-popup>
+
+<!-- time picker popup-->
+<!-- <view class="buttonContainerClass"> -->
+  <view class = "row">
+    <view>选择时间</view>
+    <van-button type="default" custom-class = "buttonClass" bind:click="onClickTimePicker">{{time}}</van-button>
+    <!-- <view>{{year}}年{{month}}月{{day}}日</view> -->
+  </view>
+<!-- </view> -->
+<van-popup show="{{showTimePicker}}" overlay="true" bind:close="onCloseTimePicker" custom-class="popupClass">
+<van-datetime-picker type = 'date' value = '{{currentDate}}' min-date = "{{minDate}}" bind:input = "onInput" formatter = '{{formatter}}' confirm="onConfirm" cancel-button-text="" confirm-button-text="" show-toolbar= "true" visible-item-count = "3"/> 
+</van-popup>
+<view class="actionButtonContainer">
+  <van-button type="danger" bind:click ="onSearch" customer-class="buttonClass">搜索</van-button> 
+  <van-button type="primary" bind:click="onAddRide" customer-class="buttonClass" >添加行程</van-button>
+</view>
+
+<van-toast id="van-toast" /> 
+
+<!-- <view>出发地：{{departure}}</view>
+<view>目的地：{{destination}}</view> -->
+<block wx:if="{{!success}}">
+  <view>{{errMsg}}</view>
+</block>
+
+<block wx:else> 
+<block wx:for="{{response}}" wx:for-item="item" wx:for-index="idx">
+  <navigator wx:if="{{idx%2==0}}" url="../rideDetail/rideDetail?ride_id={{item.ride_id}}" class='greyListContainer'>
+    <view class="line">出发地: {{item.departure}}</view>
+    <view class='line'>目的地: {{item.destination}}</view>
+    <view class='line'>出发日期：{{item.date}}</view>
+    <!-- <view class='line'> 出发时间：{{item.time}}</view> -->
+    <text class="line">人数：{{item.num_approved}}/{{item.num_seat}}</text>    
+  </navigator>
+  <navigator wx:else class="whiteListContainer" url="../rideDetail/rideDetail?ride_id={{item.ride_id}}" >
+  <view class="line"> 出发地：{{item.departure}}</view>
+    <view class='line' >目的地: {{item.destination}}</view>
+    <view class='line'>出发日期：{{item.date}}</view>
+    <!-- <view class='line'> 出发时间：{{item.time}}</view> -->
+    <text class="line">人数：{{item.num_approved}}/{{item.num_seat}}</text> 
+  </navigator>
+</block>
+</block>

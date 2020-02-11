@@ -1,0 +1,91 @@
+<!--newRide.wxml-->
+
+<!-- <view class="margin">
+<view style="margin-top: 40px;">日期</view>
+<view class="margin1" >
+<!--<view class="fl_form"> -->
+<!-- <picker mode="date" value="{{date}}" start="{{date}}" end="2020-01-01" bindchange="bindDateChange">
+<view class="picker">
+<text>选择日期</text> <text class="chosedate">{{date}}</text>
+</view>
+</picker>
+</view> --> -->
+<!--
+<input class="input" name="date" placeholder="请输入你的行程日期"  bindinput='date'/>
+ </view>
+-->
+<!-- <view style="margin-top: 15px;">时间</view>
+ <view class="margin1">
+
+<input class="input" name="time" placeholder="请输入你的出行时间" bindinput='time'/>
+ </view> -->
+
+<!-- <view style="margin-top: 15px;">出发地</view>
+<view class="margin1">
+
+<input class="input" name="departure" placeholder="请输入你的出发地点" bindinput='departure'/>
+ </view>
+
+<view style="margin-top: 15px;">目的地</view>
+ <view class="margin1">
+
+<input class="input" name="destination" placeholder="请输入你的目的地" bindinput='destination'/>
+ </view> -->
+
+<view class="buttonContainerClass">
+  <view class = "row">
+    <van-button type="default" custom-class="buttonClass" bind:click="onClickDeparture">出发地</van-button>
+    <view>{{departure}}</view>
+  </view>
+</view>
+<van-popup
+  show="{{ showDeparture }}"
+  overlay="true"
+  bind:close="onCloseDeparture"
+  custom-class="popupClass"
+>
+  <van-picker columns="{{ columns }}" bind:change="onDepartureChange"   confirm-button-text= "" cancel-button-text = "" visible-item-count = "3"/>
+</van-popup>
+
+<!--destination popup-->
+<view class="buttonContainerClass">
+  <view class = "row">
+    <van-button type="default" custom-class = "buttonClass" bind:click="onClickDestination">目的地</van-button>
+    <view>{{destination}}</view>
+  </view>
+</view>
+
+<van-popup
+  show="{{ showDestination }}"
+  overlay="true"
+  bind:close="onCloseDestination"
+  custom-class="popupClass"
+>
+  <van-picker columns="{{ columns }}" bind:change="onDestinationChange"   confirm-button-text= "" cancel-button-text = "" visible-item-count = "3"/>
+</van-popup>
+
+<!--time picker popup-->
+<view class="buttonContainerClass">
+  <view class = "row">
+    <van-button type="default" custom-class = "buttonClass" bind:click="onClickTimePicker">选择时间</van-button>
+    <view>{{year}}年{{month}}月{{day}}日</view>
+  </view>
+</view>
+<van-popup show="{{showTimePicker}}" overlay="true" bind:close="onCloseTimePicker" custom-class="popupClass">
+<van-datetime-picker type = 'date' value = '{{currentDate}}' min-date = "{{minDate}}" max-date = "{{maxDate}}" bind:input = "onInput" formatter = '{{formatter}}' confirm="onConfirm" cancel-button-text="" confirm-button-text="" show-toolbar= "true" visible-item-count = "3"/> 
+</van-popup>
+
+<view style="margin-top: 15px;">价格</view>
+ <view class="margin1">
+
+<input class="input" name="price" placeholder="请输入你的价格" bindinput='price'/>
+ </view>
+
+<view style="margin-top: 15px;">人数</view>
+ <view class="margin1">
+
+<input class="input" name="num" placeholder="请输入你可以带的人数" bindinput='num'/>
+ </view>
+
+
+<button class='complete' bindtap='complete' >完成</button>

@@ -1,0 +1,60 @@
+<view>
+<view class='page-body'>
+  <view class='page-section'>
+    <view class='title'>
+      <view>你想让司机接你的地方:</view>
+    </view>
+    <view class='try'>
+      <view class='input'>
+        <input bindinput='pick'></input>
+      </view>
+    </view>
+  </view>
+  <view class='page-section'>
+    <view class='title'>
+      <view>你想让司机送到的地方:</view>
+    </view>
+    <view class='try'>
+      <view class='input'>
+        <input bindinput='drop'></input>
+      </view>
+    </view>
+  </view>
+  <view class='page-section'>
+    <view class='title'>
+      <view>人数</view>
+    </view>
+    <view class='try'>
+      <view class='input'>
+        <input bindinput='people_num'></input>
+      </view>
+    </view>
+  </view>
+  <view class='page-section'>
+    <view class='title'>
+      <view>微信号:</view>
+    </view>
+    <view class='try'>
+      <view class='input'>
+        <input bindinput='wechat_id'></input>
+      </view>
+    </view>
+  </view>
+  <view class='page-section'>
+      <view class='title'>
+      <view>备注:</view>
+      </view>
+    <view class='try'>
+    <view class='textarea'>
+    <view class='textarea-wrp'>
+    <textarea bindblur='bindtextareablur'  placeholder='请输入备注' bindinput='note'></textarea>
+    </view>
+    </view>
+    </view>
+  </view>
+  <view class='page-section'>
+    <button type='primary' bindtap='submit' >提交</button> 
+    <!-- 这里是不是要添加一个submit function 还有submit成功后自动的页面跳转 -->
+  </view>
+</view>
+</view>

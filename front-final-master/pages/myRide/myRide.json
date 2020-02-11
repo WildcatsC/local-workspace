@@ -1,0 +1,9 @@
+{
+ "navigationBarBackgroundColor": "#DC143C",
+ "navigationBarTitleText": "My Ride",
+ "navigationBarTextStyle": "white",
+ "usingComponents":{
+   "van-badge": "/dist/badge/index",
+   "van-badge-group": "/dist/badge-group/index"
+ }
+}

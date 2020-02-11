@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'iamlegend24',
-    database: 'NIGGA'
+    database: 'NI'
 });
 var words = "";
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => { // Query:  http://localhost:1024/?publish=fucknigga
     // res.send(reverse(req.query.string));
     w = req.query.publish;
     console.log(w);
-    var insert = "INSERT INTO nigga_chatroom VALUES (?, NOW())";
+    var insert = "INSERT INTO n_chatroom VALUES (?, NOW())";
     // var values = [
     //     [w]
     // ];
