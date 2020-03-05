@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * @lc app=leetcode id=9 lang=java
  *
@@ -24,3 +25,19 @@ class Solution {  // ** (charAt) **
 }
 // @lc code=end
 
+=======
+/*
+ * @lc app=leetcode id=9 lang=java
+ *
+ * [9] Palindrome Number
+ */
+
+// @lc code=start
+class Solution {
+    public boolean isPalindrome(int x) {
+        
+    }
+}
+// @lc code=end
+
+>>>>>>> df827573b12bcab73d61bedd78765c4a580c7101
