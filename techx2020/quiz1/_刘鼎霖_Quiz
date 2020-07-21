@@ -1,0 +1,476 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# TechX 2020 计算社科预习 Quiz 1 V1.0"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "这个测试的目的不是为了难倒大家，而是为了检验预习成果，方便我们调整接下来的预习和课程安排。同时，我们也希望你们能通过这几个练习学到的知识，并学到的coding技巧。因此，我们有如下要求：\n",
+    "1. 虽然我们不允许大家向别人请教 quiz 中的问题，但是你们可以在互联网上搜索已有的资源：这也是在TechX的学习过程中大家会一直做的。（PS 请别直接抄代码！请理解之后自己实现）\n",
+    "2. 有些题目里会给出一些变量/数据，但是我们批改的时候可能会改动它们以检测你程序的可拓展性。\n",
+    "3. 请在北京时间7.19 24:00之前提交（提交方式群里会再通知），如有事无法按时请私信胡启天。\n",
+    "4. 如果感觉题目有问题或表述不清请直接在群里提出。我们有可能根据大家的提问发布V2.0 的 Quiz。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. 打印数字\n",
+    "打印出以下文字（不能使用九个print()）"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "999999999"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "1\n",
+    "22\n",
+    "333\n",
+    "4444\n",
+    "55555\n",
+    "666666\n",
+    "7777777\n",
+    "88888888\n",
+    "999999999"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "1\n",
+      "22\n",
+      "333\n",
+      "4444\n",
+      "55555\n",
+      "666666\n",
+      "7777777\n",
+      "88888888\n",
+      "999999999\n"
+     ]
+    }
+   ],
+   "source": [
+    "def main():\n",
+    "    for i in range(10):\n",
+    "        for n in range(i):\n",
+    "            print(i, end='')\n",
+    "\n",
+    "        print()\n",
+    "\n",
+    "main()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. 统计词语\n",
+    "请统计下面这段文字里出现次数最多的五个英文单词及其出现次数。创建一个key为词语，对应value为该词出现的次数的dictionary来记录这五个词。如有并列不用深究，输出前五个即可。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "asd f asdf dsa fs df asdf asd fsd f dsf d fs adf asdf s dfas df asdf d f dsf ds fsa fsd f asdf as df ds afd g asdf asdfa sdf sd fsd f sdf sd fs df sda f sadf asd f sdf sd fd fd  sd asd sa s as as d asd a ds f sdf asd fa sdf as df asdf as d sdf sdf sd  sd ds sd f df ds fs adfasd f d fdf d  d d d dd df sadf a sdf asdf asdf\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Counter({'f': 10, 'asdf': 9, 'd': 9, 'sdf': 8, 'df': 7, 'sd': 7, 'asd': 6, 'ds': 5, 'as': 5, 'fs': 4, 'fsd': 3, 'dsf': 2, 's': 2, 'sadf': 2, 'fd': 2, 'a': 2, 'dsa': 1, 'adf': 1, 'dfas': 1, 'fsa': 1, 'afd': 1, 'g': 1, 'asdfa': 1, 'sda': 1, 'sa': 1, 'fa': 1, 'adfasd': 1, 'fdf': 1, 'dd': 1})\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "[('f', 10), ('asdf', 9), ('d', 9), ('sdf', 8), ('df', 7)]"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from collections import Counter\n",
+    "words_1='asd f asdf dsa fs df asdf asd fsd f dsf d fs adf asdf s dfas df asdf d f dsf ds fsa fsd f asdf as df ds afd g asdf asdfa sdf sd fsd f sdf sd fs df sda f sadf asd f sdf sd fd fd sd asd sa s as as d asd a ds f sdf asd fa sdf as df asdf as d sdf sdf sd sd ds sd f df ds fs adfasd f d fdf d d d d dd df sadf a sdf asdf asdf'\n",
+    "words = words_1.split(\" \")\n",
+    "number = Counter(words)\n",
+    "print(number)\n",
+    "number.most_common(5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. list equal?\n",
+    "Write a function that checks if two lists are equal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "list1 not equals to list2\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista = [3,4,5]\n",
+    "listb = [4,5,6,7] \n",
+    "def check(list1,list2):\n",
+    "    if list1 == list2:\n",
+    "        print(\"list1 equals to list2\")\n",
+    "    else:\n",
+    "        print(\"list1 not equals to list2\")\n",
+    "check(lista,listb)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Leap year? \n",
+    "Usually years that are divisible by 4 are leap years, for example 1996. However, years that are divisible by 100 (for example, 1900) are not leap years, but years that are divisible by 400 are leap years (for example, 2000). Write a function that takes in a year and computes whether that year is a leap year. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please input year:  2020\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2020 is leap year\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def check_year(year):\n",
+    "    if (year % 4) == 0:\n",
+    "        if (year % 100) == 0:\n",
+    "            if (year % 400) == 0:\n",
+    "                print(\"{0} is leap year\".format(year))\n",
+    "                return True\n",
+    "            else:\n",
+    "                print(\"{0} is not leap year\".format(year))\n",
+    "                return False\n",
+    "        else:\n",
+    "                print(\"{0} is leap year\".format(year))   \n",
+    "                return True\n",
+    "    else:\n",
+    "        print(\"{0} is not leap year\".format(year))\n",
+    "        return False\n",
+    "check_year(int(input(\"please input year: \")))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Day of Year?\n",
+    "输入某年某月某日，判断这一天是这一年的第几天？(提示：请使用上一题的函数)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please input data：eg. 2018.11.08 2019.5.2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2019 is not leap year\n",
+      "2019.5.2 is the 122 day of year 2019\n"
+     ]
+    }
+   ],
+   "source": [
+    "p_list = [0,31,59,90,120,151,181,212,243,273,304,334]\n",
+    "r_list = [0,31,60,91,121,152,182,213,244,274,305,335]\n",
+    "\n",
+    "str1 = input(\"please input data：eg. 2018.11.08\")\n",
+    "a, b, c = str1.split('.')\n",
+    "\n",
+    "a = int(a)\n",
+    "b = int(b)\n",
+    "c = int(c)\n",
+    "def day(str1):\n",
+    "    if check_year(a) == True:\n",
+    "        return(r_list[b-1]+c)\n",
+    "    else:\n",
+    "        return(p_list[b-1]+c)\n",
+    "print(\"{} is the {} day of year {}\".format(str1,day(str1),a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. Calculate Product\n",
+    "Write a function that takes two positive integers returns their product without using the symbol “*”\n",
+    "1.  Use iteration (for loop)\n",
+    "2.  Use recursion (extra exercise) -- 非必做，感兴趣的同学请自行搜索什么是recursion/递归"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please input an integer:  4\n",
+      "please input an integer:  5\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def prod(a,b):\n",
+    "    product = 0\n",
+    "    for i in range(b):\n",
+    "        product += a\n",
+    "    return product\n",
+    "prod(int(input(\"please input an integer: \")),int(input(\"please input an integer: \")))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 7. Reverse and Combine\n",
+    "Write a function named reverse_combine() to reverse and combine two strings with the same length.  Ex: reverse_combine(“12345”, “abcde”) returns “5e4d3c2b1a”\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "please input a character:  12345\n",
+      "please input a character:  abcde\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'5e4d3c2b1a'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def reverse_combine(char1,char2):\n",
+    "    char1.reverse()\n",
+    "    char2.reverse()\n",
+    "    p = 0\n",
+    "    for i in range(len(char2)):\n",
+    "        char1.insert(i+1+p,char2[i])\n",
+    "        p+=1\n",
+    "    result = \"\".join(char1)\n",
+    "    return(result)\n",
+    "reverse_combine(list(input('please input a character: ')),list(input('please input a character: ')))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 8. 二进制转换\n",
+    "编写一个将十进制转换为二进制的函数，要求采用“除2取余”的方式，结果与调用 bin() 一样返回字符串形式（提示：请了解Python中 %   /  // 三种除法的区别）\n",
+    "不要求加上bin()输出后面的'0b'。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def transfer(n):\n",
+    "    x=2  \n",
+    "    b=[]  \n",
+    "    result=[]\n",
+    "    while True:   \n",
+    "        s=n//x  \n",
+    "        y=n%x   \n",
+    "        b=b+[y] \n",
+    "        if s==0:\n",
+    "            break  \n",
+    "        n=s\n",
+    "    b.reverse()  \n",
+    "\n",
+    "    for i in b:\n",
+    "        result.append(str(i))\n",
+    "    print ('the result is',\"\".join(result))\n",
+    "\n",
+    "transfer(int(input('please input an integer：')) )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 反馈\n",
+    "如果你对这个quiz的难度，预习的进度，以及课程目前以来的任何方面有任何建议或者问题都欢迎写在下面！"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "问一下最后一道题为什么我print（b)得到的是20呢。\n",
+    "这几天在实习，由于之前接触python比较少，所以感觉这两天的任务还是蛮重的，不过挺有意思的。"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
