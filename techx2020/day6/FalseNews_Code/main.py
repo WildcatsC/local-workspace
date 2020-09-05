@@ -9,7 +9,7 @@ topics_file='./data/topics_anon.csv'
 
 
 def convert_raw_data_to_metadata():
-    print "Converting raw data to metadata..."
+    print("Converting raw data to metadata...")
     with open(raw_data_file,'rb') as f:
         reader=csv.reader(f)
         next(reader, None) #skippingthe header
@@ -142,9 +142,9 @@ def generate_figures():
     FIGURE 1B
     CCDF of number of cascades per rumor for different veracities for all rumors
     '''
-    print "Preparing figure 1B"
+    print("Preparing figure 1B")
     ax = plt.subplot(111)
-    ax.set_xscale('log')
+    ax.set_xscale('log') 
     ax.set_yscale('log')
     formatter = plt.FuncFormatter(log_10_product)
     ax.xaxis.set_major_formatter(formatter)
