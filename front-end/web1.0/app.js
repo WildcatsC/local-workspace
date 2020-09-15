@@ -71,16 +71,16 @@ function convert(word) {
     else return "剪刀";
 }
 
-function lose(me, ucsb) {
+function lose(me, u) {
     ucsbScore++;
     ucsbScore_span.innerHTML = ucsbScore;
-    result_p.innerHTML = `我出${convert(ucsb)}  ucsb出${convert(me)}. 输了😪`;
+    result_p.innerHTML = `我出${convert(u)}  你出${convert(me)}. 输了😪`;
     document.getElementById(me).classList.add("red-glow");
     setTimeout(() => { document.getElementById(me).classList.remove("red-glow") }, 300); //es6 写法  **牛逼**
 }
 
 function draw(me) {
-    result_p.innerHTML = `我爱ucsb, 好好毒🌲.`;
+    result_p.innerHTML = `我爱你, 好好毒🌲.`;
     document.getElementById(me).classList.add("gray-glow");
     setTimeout(function() { document.getElementById(me).classList.remove("gray-glow") }, 300);
 }
