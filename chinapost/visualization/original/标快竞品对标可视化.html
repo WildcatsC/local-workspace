@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>标快竞品时限对标</title>
+	<!-- 引入自定义 css -->
+	<link rel="stylesheet" href='./css/reset.css' />
+	<link rel="stylesheet" href='./css/gray.css' />
+	<link rel="stylesheet" href='./css/jquery.searchableSelect.css' />
+	<script src="./js/asset/jquery-1.11.1.min.js"></script>
+    <script src="./js/asset/jquery.searchableSelect.js"></script>
+</head>
+<body>
+	<div id="head" style="font-family:Microsoft YaHei;font-weight:bold;">标快竞品时限对标</div>
+	<div id="middleware" style="font-family:SimHei;font-size:18;">
+		<!--筛选收寄省市-->
+		<form class="select-menu">
+		    <label>收寄市:</label>
+		    <select id="org_city" style="width:150px;">
+		      <option  value="-1">请选择市</option>
+		    </select>
+	    </form>
+		<form class="select-menu">
+		    <label>寄达市:</label>
+		    <select id="dest_city" style="width:150px;">
+		      <option  value="-1">请选择市</option>
+		    </select>
+	    </form>
+	</div>
+
+
+
+	<div id="main">
+	
+		<div class="left" id="express"></div>
+		<div id="leftTXT" class="innerTXT" style="margin-left:20px;"></div>
+		<div id="leftTXT1" class="innerTXT1" style="margin-left:280px;"></div>
+
+		<div class="right" id="sf"></div>
+		<div id="rightTXT" class="innerTXT" style="margin-left:620px;"></div>
+		<div id="rightTXT1" class="innerTXT1" style="margin-left:880px;"></div>
+	</div>
+	<div id="foot" style="font-family:Microsoft YaHei;">&copy; 2020 中邮信科版权所有</div>
+	<!-- 引入数据 -->
+	<script src='./js/data/data_bk.js'></script>
+	<script src='./js/data/data_bk2.js'></script>
+	<script src='./js/data/data_sf.js'></script>
+	<script src='./js/data/data_sf2.js'></script>
+	<!-- 引入 echarts.js -->
+	<script src='./js/echarts-all-3.js'></script>
+	<script src='./js/map3/china.js'></script>
+  <!--引入echarts主函数-->
+	<script src='./js/main/main_all_bk.js'></script>
+	<script>
+		$(function(){
+			$('select').searchableSelect();
+		});
+    </script>
+
+</body>
+
+</html>
